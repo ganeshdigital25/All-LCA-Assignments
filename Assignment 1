@@ -1,67 +1,40 @@
- Program to create Dictionary, Tuple and List of students
-# and perform Add, Delete and Update operations
+Write a python program to create a Dictionary,Tuple and List of students and perform the following operations on the dictionary: Add,Delete,Update.
+```python
+# Create a List of students
+students_list = ["Rahul", "Priya", "Amit", "Sneha"]
 
-# ---------------- Dictionary ----------------
+# Create a Tuple of students
+students_tuple = ("Rahul", "Priya", "Amit", "Sneha")
+
+# Create a Dictionary of students
 students_dict = {
-    1: "Yash",
-    2: "Rahul",
-    3: "Amit"
+    101: "Rahul",
+    102: "Priya",
+    103: "Amit",
+    104: "Sneha"
 }
 
-print("Original Dictionary:", students_dict)
+print("Student List:")
+print(students_list)
 
-# Add
-students_dict[4] = "Rohan"
-print("After Adding:", students_dict)
+print("\nStudent Tuple:")
+print(students_tuple)
 
-# Delete
-del students_dict[2]
-print("After Deleting:", students_dict)
+print("\nStudent Dictionary:")
+print(students_dict)
 
-# Update
-students_dict[1] = "Yash Ingulkar"
-print("After Updating:", students_dict)
+# Add a student to the dictionary
+students_dict[105] = "Neha"
+print("\nAfter Adding a Student:")
+print(students_dict)
 
+# Update a student's name
+students_dict[103] = "Ankit"
+print("\nAfter Updating Student:")
+print(students_dict)
 
-# ---------------- List ----------------
-students_list = ["Yash", "Rahul", "Amit"]
-
-print("\nOriginal List:", students_list)
-
-# Add
-students_list.append("Rohan")
-print("After Adding:", students_list)
-
-# Delete
-students_list.remove("Rahul")
-print("After Deleting:", students_list)
-
-# Update
-students_list[0] = "Yash Ingulkar"
-print("After Updating:", students_list)
-
-
-# ---------------- Tuple ----------------
-students_tuple = ("Yash", "Rahul", "Amit")
-
-print("\nOriginal Tuple:", students_tuple)
-
-# Add, Delete and Update are not directly possible in a tuple
-# because tuples are immutable.
-
-# Convert tuple to list
-temp = list(students_tuple)
-
-# Add
-temp.append("Rohan")
-
-# Delete
-temp.remove("Rahul")
-
-# Update
-temp[0] = "Yash Ingulkar"
-
-# Convert back to tuple
-students_tuple = tuple(temp)
-
-print("After Add, Delete and Update:", students_tuple)
+# Delete a student
+del students_dict[102]
+print("\nAfter Deleting a Student:")
+print(students_dict)
+```
