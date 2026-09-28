@@ -1,0 +1,26 @@
+def is_valid_string(text):
+    """
+    Check whether a string contains only:
+    - lowercase letters (a-z)
+    - uppercase letters (A-Z)
+    - digits (0-9)
+
+    Returns:
+        True  -> if the string contains only allowed characters
+        False -> otherwise
+    """
+    return bool(text) and all(
+        ('a' <= char <= 'z') or
+        ('A' <= char <= 'Z') or
+        ('0' <= char <= '9')
+        for char in text
+    )
+
+
+# Test the function
+test_string = input("Enter a string: ")
+
+if is_valid_string(test_string):
+    print("Valid: The string contains only a-z, A-Z, and 0-9.")
+else:
+    print("Invalid: The string contains unsupported characters.")
